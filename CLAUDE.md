@@ -31,6 +31,11 @@ The website contains these main sections:
 - **Website**: www.LesnaResidencjaKrolewo.pl
 - **Location**: Królewo, Mazowieckie, Poland
 
+## Repository Information
+
+- **Remote Repository**: https://github.com/andrewgacamac/LesnaResidencjaKrolewo.git
+- **Branch**: main
+
 ## Development Workflow
 
 **No build process required** - edit `index.html` directly and deploy to any static hosting service.
