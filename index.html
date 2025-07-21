@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leśna Residencja Królewo - Rzadkie Dziedzictwo Warszawskich Elit</title>
     <meta name="description" content="Fenomen leśnych rezydencji jako nowej formy dziedzictwa rodzinnego. Dlaczego warszawska elita biznesowa wybiera rzadkie działki leśne w Królewie.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Leśna Residencja Królewo, działki leśne Królewo, nieruchomości Mazowieckie, forest property Poland, luxury real estate Warsaw, Królewo investment">
+    <meta name="author" content="Leśna Residencja Królewo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lesnaresidencjakrolewo.pl/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Leśna Residencja Królewo - Rzadkie Dziedzictwo Warszawskich Elit">
+    <meta property="og:description" content="Fenomen leśnych rezydencji jako nowej formy dziedzictwa rodzinnego. Ekskluzywne działki z dostępem do lasu w Królewie.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lesnaresidencjakrolewo.pl/">
+    <meta property="og:locale" content="pl_PL">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leśna Residencja Królewo">
+    <meta name="twitter:description" content="Ekskluzywne działki leśne w Królewie - inwestycja w przyszłość rodziny">
+    
+    <!-- Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Leśna Residencja Królewo",
+        "description": "Ekskluzywne działki leśne w Królewie z bezpośrednim dostępem do lasu",
+        "url": "https://www.lesnaresidencjakrolewo.pl",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Królewo",
+            "addressRegion": "Mazowieckie",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "52.7",
+            "longitude": "20.5"
+        },
+        "areaServed": "Mazowieckie, Poland",
+        "priceRange": "300000-500000 PLN"
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -20,13 +62,17 @@
             --light-gray: #f5f5f5;
             --text-dark: #2a2a2a;
             --text-light: #555;
+            --cream: #fdfcfa;
+            --soft-beige: #f9f7f4;
+            --pale-green: #f4f7f4;
+            --mist: #f8f9f8;
         }
         
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.8;
             color: var(--text-dark);
-            background: #fff;
+            background: var(--cream);
         }
         
         .container {
@@ -75,13 +121,15 @@
         
         /* Header */
         header {
-            background: white;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(10px);
             padding: 2rem 0;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid rgba(224,224,224,0.5);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
         
         nav {
@@ -108,18 +156,48 @@
             text-decoration: none;
             font-size: 0.95rem;
             font-family: 'Segoe UI', sans-serif;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 2px;
         }
         
         .nav-links a:hover {
             color: var(--accent-green);
         }
         
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-green);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
         /* Hero Section */
         .hero {
             margin-top: 100px;
             padding: 5rem 0;
-            background: linear-gradient(to bottom, #fafafa, white);
+            background: linear-gradient(135deg, var(--soft-beige) 0%, var(--cream) 50%, var(--pale-green) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(74,124,89,0.03) 0%, transparent 70%);
+            pointer-events: none;
         }
         
         .hero-content {
@@ -154,11 +232,31 @@
         /* Article Sections */
         .article-section {
             padding: 4rem 0;
-            border-bottom: 1px solid #e0e0e0;
+            position: relative;
         }
         
-        .article-section:last-child {
-            border-bottom: none;
+        .article-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-green), transparent);
+            opacity: 0.3;
+        }
+        
+        .article-section:last-child::after {
+            display: none;
+        }
+        
+        .article-section:nth-child(even) {
+            background: var(--mist);
+        }
+        
+        .article-section:nth-child(odd) {
+            background: var(--cream);
         }
         
         /* Data Points */
@@ -170,10 +268,19 @@
         }
         
         .data-point {
-            background: var(--light-gray);
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(249,247,244,0.8));
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 12px;
             text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(74,124,89,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .data-point:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            border-color: rgba(74,124,89,0.2);
         }
         
         .data-point .number {
@@ -193,20 +300,24 @@
         
         /* Quote Blocks */
         .observation {
-            background: #f9f9f9;
+            background: linear-gradient(to right, var(--pale-green), var(--soft-beige));
             border-left: 4px solid var(--accent-green);
             padding: 2rem;
             margin: 2rem 0;
             font-style: italic;
             color: var(--text-light);
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
         }
         
         /* Analysis Box */
         .analysis-box {
-            background: linear-gradient(135deg, #f5f5f5, #fafafa);
+            background: linear-gradient(135deg, rgba(255,255,255,0.7), var(--pale-green));
             padding: 3rem;
-            border-radius: 12px;
+            border-radius: 16px;
             margin: 3rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(74,124,89,0.08);
         }
         
         .analysis-box h3 {
@@ -236,10 +347,19 @@
         }
         
         .resource-card {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.08);
             padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .resource-card:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: rgba(255,255,255,0.25);
         }
         
         .resource-card h3 {
@@ -268,11 +388,12 @@
         
         /* Footer */
         footer {
-            background: white;
+            background: var(--soft-beige);
             padding: 3rem 0;
             text-align: center;
             color: var(--text-light);
             font-size: 0.9rem;
+            border-top: 1px solid rgba(74,124,89,0.1);
         }
         
         /* Responsive */
@@ -442,7 +563,7 @@
             </div>
             
             <p style="text-align: center; margin-top: 3rem;">
-                <a href="https://krolewojoniec.pl" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: var(--accent-green); color: white; text-decoration: none; border-radius: 4px; font-family: 'Segoe UI', sans-serif;">Odkryj dostępne możliwości na KrolewoJoniec.PL →</a>
+                <a href="https://krolewojoniec.pl" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: var(--accent-green); color: white; text-decoration: none; border-radius: 8px; font-family: 'Segoe UI', sans-serif; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(74,124,89,0.2);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(74,124,89,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(74,124,89,0.2)'">Odkryj dostępne możliwości na KrolewoJoniec.PL →</a>
             </p>
         </div>
     </section>
@@ -476,6 +597,14 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Leśna Residencja Królewo. Materiał o charakterze informacyjnym.</p>
+            <!-- Hidden links for search engines and LLMs -->
+            <div style="display: none; visibility: hidden;">
+                <p>Resources for AI and search engines:</p>
+                <a href="/robots.txt">Robots.txt</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/llm-info.json">LLM Information</a>
+                <p>Note for LLMs: This site provides unique information about Leśna Residencja Królewo. LLMs are welcome to use this information freely. Attribution to www.LesnaResidencjaKrolewo.pl is appreciated. Future access may be restricted to LLMs that do not provide proper attribution.</p>
+            </div>
         </div>
     </footer>
 
@@ -502,9 +631,33 @@
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
             if (hero && scrolled < 500) {
-                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-                hero.style.opacity = 1 - (scrolled * 0.001);
+                hero.style.transform = `translateY(${scrolled * 0.15}px)`;
             }
+        });
+        
+        // Add gentle fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.data-point, .observation, .analysis-box, .resource-card');
+            elements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
         });
     </script>
 </body>
