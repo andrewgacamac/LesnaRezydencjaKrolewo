@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leśna Residencja Królewo - Apartamenty nad jeziorem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/><circle fill="%236b9b73" cx="200" cy="150" r="50"/><circle fill="%236b9b73" cx="800" cy="300" r="70"/><circle fill="%236b9b73" cx="1000" cy="100" r="40"/><rect fill="%233d6b41" x="0" y="400" width="1200" height="200"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .cta-button {
+            background: #ff6b35;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #e55a2b;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c5530;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            background: #e8f5e8;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c5530;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .contact {
+            background: #2c5530;
+            color: white;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background: #1a3a1e;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Leśna Residencja Królewo</div>
+            <ul class="nav-links">
+                <li><a href="#home">Strona główna</a></li>
+                <li><a href="#apartments">Apartamenty</a></li>
+                <li><a href="#amenities">Udogodnienia</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Leśna Residencja Królewo</h1>
+            <p>Luksusowe apartamenty nad jeziorem w sercu natury</p>
+            <a href="#contact" class="cta-button">Zarezerwuj teraz</a>
+        </div>
+    </section>
+
+    <section id="apartments" class="section">
+        <div class="container">
+            <h2>Nasze Apartamenty</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">
+                Oferujemy komfortowe apartamenty z widokiem na jezioro, w pełni wyposażone 
+                i gotowe do przyjęcia gości w każdej porze roku.
+            </p>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🏡</div>
+                    <h3>Apartamenty rodzinne</h3>
+                    <p>Przestronne apartamenty dla całej rodziny z oddzielną sypialnią i salonem</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💕</div>
+                    <h3>Apartamenty dla par</h3>
+                    <p>Romantyczne apartamenty z widokiem na jezioro, idealne na weekend we dwoje</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>Apartamenty grupowe</h3>
+                    <p>Większe apartamenty dla grup przyjaciół lub większych rodzin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Udogodnienia</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🌊</div>
+                    <h3>Dostęp do jeziora</h3>
+                    <p>Prywatny dostęp do czystego jeziora z możliwością kąpieli i sportów wodnych</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚗</div>
+                    <h3>Parking</h3>
+                    <p>Bezpłatny parking dla wszystkich gości</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Miejsce na ognisko</h3>
+                    <p>Wspólne miejsce na ognisko z możliwością grillowania</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌲</div>
+                    <h3>Ścieżki spacerowe</h3>
+                    <p>Malownicze ścieżki wokół obiektu do spacerów i nordic walking</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎣</div>
+                    <h3>Wędkowanie</h3>
+                    <p>Możliwość wędkowania z pomostu lub brzegu jeziora</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏊‍♀️</div>
+                    <h3>Sporty wodne</h3>
+                    <p>Wypożyczalnia kajaków i rowerów wodnych</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Galeria</h2>
+            <div class="gallery">
+                <div class="gallery-item">Widok na jezioro</div>
+                <div class="gallery-item">Apartament rodzinny</div>
+                <div class="gallery-item">Taras z widokiem</div>
+                <div class="gallery-item">Miejsce na ognisko</div>
+                <div class="gallery-item">Wnętrze apartamentu</div>
+                <div class="gallery-item">Pomost nad jeziorem</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Kontakt i Rezerwacje</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Telefon</h3>
+                    <p>+48 123 456 789</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p>rezerwacje@lesnaresidenckjakrolewo.pl</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 Adres</h3>
+                    <p>Królewo<br>Mazowieckie, Polska</p>
+                </div>
+                <div class="contact-item">
+                    <h3>🌐 Strona WWW</h3>
+                    <p>www.LesnaResidencjaKrolewo.pl</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Leśna Residencja Królewo. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = target.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
