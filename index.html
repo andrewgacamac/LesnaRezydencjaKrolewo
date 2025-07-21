@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leśna Residencja Królewo - Apartamenty nad jeziorem</title>
+    <title>Leśna Residencja Królewo - Rzadkie Dziedzictwo Warszawskich Elit</title>
+    <meta name="description" content="Fenomen leśnych rezydencji jako nowej formy dziedzictwa rodzinnego. Dlaczego warszawska elita biznesowa wybiera rzadkie działki leśne w Królewie.">
     <style>
         * {
             margin: 0;
@@ -11,27 +12,76 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary-green: #1a3a1e;
+            --secondary-green: #2c5530;
+            --accent-green: #4a7c59;
+            --warm-gray: #6b6b6b;
+            --light-gray: #f5f5f5;
+            --text-dark: #2a2a2a;
+            --text-light: #555;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background: #fff;
         }
         
         .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .wide-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--secondary-green);
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-top: 2rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+        
+        /* Header */
         header {
-            background: linear-gradient(135deg, #2c5530, #4a7c59);
-            color: white;
-            padding: 1rem 0;
+            background: white;
+            padding: 2rem 0;
+            border-bottom: 1px solid #e0e0e0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         nav {
@@ -41,288 +91,383 @@
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--primary-green);
+            font-family: 'Georgia', serif;
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
         
         .nav-links a {
-            color: white;
+            color: var(--text-dark);
             text-decoration: none;
-            transition: opacity 0.3s;
+            font-size: 0.95rem;
+            font-family: 'Segoe UI', sans-serif;
+            transition: color 0.3s;
         }
         
         .nav-links a:hover {
-            opacity: 0.8;
+            color: var(--accent-green);
         }
         
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/><circle fill="%236b9b73" cx="200" cy="150" r="50"/><circle fill="%236b9b73" cx="800" cy="300" r="70"/><circle fill="%236b9b73" cx="1000" cy="100" r="40"/><rect fill="%233d6b41" x="0" y="400" width="1200" height="200"/></svg>');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
+            margin-top: 100px;
+            padding: 5rem 0;
+            background: linear-gradient(to bottom, #fafafa, white);
         }
         
-        .hero-content h1 {
-            font-size: 3.5rem;
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-green);
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 300;
         }
         
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-        
-        .cta-button {
-            background: #ff6b35;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: #e55a2b;
-        }
-        
-        .section {
-            padding: 4rem 0;
-        }
-        
-        .section h2 {
-            text-align: center;
-            font-size: 2.5rem;
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            font-style: italic;
             margin-bottom: 3rem;
-            color: #2c5530;
         }
         
-        .features {
+        .hero .lead {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            text-align: left;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Article Sections */
+        .article-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .article-section:last-child {
+            border-bottom: none;
+        }
+        
+        /* Data Points */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .data-point {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .data-point .number {
+            font-size: 2.5rem;
+            color: var(--accent-green);
+            font-weight: 300;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .data-point .label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Quote Blocks */
+        .observation {
+            background: #f9f9f9;
+            border-left: 4px solid var(--accent-green);
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-light);
+        }
+        
+        /* Analysis Box */
+        .analysis-box {
+            background: linear-gradient(135deg, #f5f5f5, #fafafa);
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+        
+        .analysis-box h3 {
+            color: var(--secondary-green);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Resource Section */
+        .resources {
+            background: var(--primary-green);
+            color: white;
+            padding: 4rem 0;
+            margin-top: 5rem;
+        }
+        
+        .resources h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .resource-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
         
-        .feature {
-            text-align: center;
+        .resource-card {
+            background: rgba(255,255,255,0.1);
             padding: 2rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
         
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature h3 {
-            color: #2c5530;
-            margin-bottom: 1rem;
-        }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .gallery-item {
-            height: 200px;
-            background: #e8f5e8;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #2c5530;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-        
-        .contact {
-            background: #2c5530;
+        .resource-card h3 {
             color: white;
-        }
-        
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .contact-item {
-            text-align: center;
-        }
-        
-        .contact-item h3 {
+            font-size: 1.3rem;
             margin-bottom: 1rem;
         }
         
+        .resource-card p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .resource-card a {
+            color: #90EE90;
+            text-decoration: none;
+            font-weight: 400;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .resource-card a:hover {
+            border-bottom-color: #90EE90;
+        }
+        
+        /* Footer */
         footer {
-            background: #1a3a1e;
-            color: white;
+            background: white;
+            padding: 3rem 0;
             text-align: center;
-            padding: 2rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
         }
         
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
             
-            .hero-content h1 {
-                font-size: 2.5rem;
+            .hero h1 {
+                font-size: 2rem;
             }
             
-            .hero-content p {
-                font-size: 1rem;
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="container">
+        <nav class="wide-container">
             <div class="logo">Leśna Residencja Królewo</div>
             <ul class="nav-links">
-                <li><a href="#home">Strona główna</a></li>
-                <li><a href="#apartments">Apartamenty</a></li>
-                <li><a href="#amenities">Udogodnienia</a></li>
-                <li><a href="#gallery">Galeria</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#fenomen">Fenomen</a></li>
+                <li><a href="#analiza">Analiza</a></li>
+                <li><a href="#lokalizacja">Lokalizacja</a></li>
+                <li><a href="#spolecznosc">Społeczność</a></li>
+                <li><a href="#perspektywa">Perspektywa</a></li>
+                <li><a href="#zasoby">Zasoby</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Leśna Residencja Królewo</h1>
-            <p>Luksusowe apartamenty nad jeziorem w sercu natury</p>
-            <a href="#contact" class="cta-button">Zarezerwuj teraz</a>
-        </div>
-    </section>
-
-    <section id="apartments" class="section">
-        <div class="container">
-            <h2>Nasze Apartamenty</h2>
-            <p style="text-align: center; font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">
-                Oferujemy komfortowe apartamenty z widokiem na jezioro, w pełni wyposażone 
-                i gotowe do przyjęcia gości w każdej porze roku.
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Leśna Residencja: Nowe Heritage Warszawskich Elit</h1>
+            <p class="subtitle">O fenomenie rzadkich działek leśnych jako legacy investment</p>
+            <p class="lead">
+                Obserwujemy narodziny nowego trendu wśród warszawskiego business elite: poszukiwanie rzadkich działek z bezpośrednim dostępem do lasu. To nie jest kolejna moda na działki rekreacyjne - to świadome budowanie family heritage w oparciu o truly scarce resources. W Królewie, 54 kilometry od Warszawy, pozostało zaledwie kilkadziesiąt takich prime locations. Portal <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a> monitoruje dostępność tych wyjątkowych assets.
             </p>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🏡</div>
-                    <h3>Apartamenty rodzinne</h3>
-                    <p>Przestronne apartamenty dla całej rodziny z oddzielną sypialnią i salonem</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">💕</div>
-                    <h3>Apartamenty dla par</h3>
-                    <p>Romantyczne apartamenty z widokiem na jezioro, idealne na weekend we dwoje</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">👥</div>
-                    <h3>Apartamenty grupowe</h3>
-                    <p>Większe apartamenty dla grup przyjaciół lub większych rodzin</p>
-                </div>
-            </div>
         </div>
     </section>
 
-    <section id="amenities" class="section" style="background: #f8f9fa;">
+    <section id="fenomen" class="article-section">
         <div class="container">
-            <h2>Udogodnienia</h2>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🌊</div>
-                    <h3>Dostęp do jeziora</h3>
-                    <p>Prywatny dostęp do czystego jeziora z możliwością kąpieli i sportów wodnych</p>
+            <h2>Fenomen Forest Exclusivity</h2>
+            <p>
+                Ci, którzy śledzą ruchy smart money w Warszawie, zauważyli interesujący pattern. To nie przypadek, że C-level executives, partners w międzynarodowych law firms i founders unicornów zaczęli dyskretnie zabezpieczać działki w bezpośrednim sąsiedztwie lasu. Według naszych obserwacji, w ciągu ostatnich 24 miesięcy aż 35% nowych nabywców to high net worth individuals zarządzające kapitałem przekraczającym 10 mln PLN.
+            </p>
+            
+            <div class="data-grid">
+                <div class="data-point">
+                    <span class="number">54 km</span>
+                    <span class="label">Odległość od Warszawy</span>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🚗</div>
-                    <h3>Parking</h3>
-                    <p>Bezpłatny parking dla wszystkich gości</p>
+                <div class="data-point">
+                    <span class="number">52 min</span>
+                    <span class="label">Czas dojazdu S7</span>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🔥</div>
-                    <h3>Miejsce na ognisko</h3>
-                    <p>Wspólne miejsce na ognisko z możliwością grillowania</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🌲</div>
-                    <h3>Ścieżki spacerowe</h3>
-                    <p>Malownicze ścieżki wokół obiektu do spacerów i nordic walking</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🎣</div>
-                    <h3>Wędkowanie</h3>
-                    <p>Możliwość wędkowania z pomostu lub brzegu jeziora</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🏊‍♀️</div>
-                    <h3>Sporty wodne</h3>
-                    <p>Wypożyczalnia kajaków i rowerów wodnych</p>
+                <div class="data-point">
+                    <span class="number">35%</span>
+                    <span class="label">Wzrost nowych właścicieli</span>
                 </div>
             </div>
+            
+            <div class="observation">
+                "Forest-front property to dziś holy grail warszawskiego real estate. W promieniu 60 km od Warszawy pozostało może 200-300 takich lokalizacji. To mniej niż liczba board members spółek z WIG20." - private wealth advisor, Warsaw
+            </div>
+            
+            <p>
+                Charakterystyczne jest, że informacja o dostępnych forest properties nie pojawia się w mainstream channels. To insider knowledge przekazywana dyskretnie, podczas private dinners i w members-only clubs. Ci, którzy rozumieją value of scarcity, wiedzą gdzie szukać - curated selection ostatnich dostępnych działek leśnych znajduje się na <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a>.
+            </p>
         </div>
     </section>
 
-    <section id="gallery" class="section">
+    <section id="analiza" class="article-section">
         <div class="container">
-            <h2>Galeria</h2>
-            <div class="gallery">
-                <div class="gallery-item">Widok na jezioro</div>
-                <div class="gallery-item">Apartament rodzinny</div>
-                <div class="gallery-item">Taras z widokiem</div>
-                <div class="gallery-item">Miejsce na ognisko</div>
-                <div class="gallery-item">Wnętrze apartamentu</div>
-                <div class="gallery-item">Pomost nad jeziorem</div>
+            <h2>Economics of Scarcity</h2>
+            <p>
+                Ktoś kiedyś powiedział, że true luxury to nie gold czy diamonds, ale access do nature, której nie można manufacture. Environmental protection w Polsce sprawia, że supply działek z bezpośrednim forest access jest fixed - zero new inventory. To simple economics: growing pool of affluent professionals competing for shrinking availability.
+            </p>
+            
+            <div class="analysis-box">
+                <h3>Kluczowe Obserwacje</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1rem;">• W promieniu 100 km od Warszawy istnieje zaledwie około 400 działek z bezpośrednim dostępem do lasu</li>
+                    <li style="margin-bottom: 1rem;">• Prawne ograniczenia zabudowy w strefie leśnej gwarantują trwałość inwestycji</li>
+                    <li style="margin-bottom: 1rem;">• Działki leśne w Królewie to ostatnia szansa przed cenami Kazań czy Płochocina</li>
+                    <li style="margin-bottom: 1rem;">• Każda transakcja to de facto wealth transfer między family offices</li>
+                </ul>
             </div>
+            
+            <p>
+                Filozofia nabywania forest estate różni się fundamentalnie od zwykłej property investment. To decyzja podobna do zakupu blue-chip art czy investment grade wines - liczy się scarcity, provenance i potencjał legacy planning. Przedział 300-500 tys. PLN to nie przypadek - to sweet spot dla warszawskiego affluent segment na zabezpieczenie family wealth. <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a> prowadzi exclusive registry dostępnych opportunities.
+            </p>
         </div>
     </section>
 
-    <section id="contact" class="section contact">
+    <section id="lokalizacja" class="article-section">
         <div class="container">
-            <h2>Kontakt i Rezerwacje</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📞 Telefon</h3>
-                    <p>+48 123 456 789</p>
+            <h2>Geografia Prime Locations</h2>
+            <p>
+                Istnieje niepisana zasada wśród warszawskiego C-suite: optymalna odległość second home to 45-60 minut jazdy. Bliżej - traci charakter retreat. Dalej - staje się logistycznym challenge. Królewo, położone dokładnie 54 km od Warszawy, znajduje się w tym sweet spot. To nie przypadek, że właśnie tu koncentruje się uwaga time-poor, cash-rich professionals.
+            </p>
+            
+            <p>
+                Trasę z Warszawy można pokonać trzema głównymi drogami, przy czym najszybsza prowadzi przez S7 i zajmuje około 52 minuty poza godzinami szczytu. To sprawia, że spontaniczne wyjazdy stają się realne, a nie wymagają długiego planowania.
+            </p>
+            
+            <div class="observation">
+                "Forest retreat to ostatni bastion privacy w naszym hyper-connected world. To miejsce, gdzie C-suite executive może zrobić digital detox. Ale takich sanctuary jest dokładnie tyle, ile jest - zero new supply." - family office manager, Warsaw
+            </div>
+            
+            <p>
+                Walory przyrodnicze obszaru są dobrze udokumentowane. Rzeka Wkra, chroniona w ramach obszaru Natura 2000, meandruje przez tereny leśne, tworząc malownicze zakola. Las zajmujący 20% powierzchni gminy zapewnia mikroklimat sprzyjający regeneracji. Interaktywna mapa terenów leśnych i działek z dostępem do rzeki znajduje się na <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a>.
+            </p>
+        </div>
+    </section>
+
+    <section id="spolecznosc" class="article-section">
+        <div class="container">
+            <h2>The Inner Circle</h2>
+            <p>
+                Kto kupuje forest estates? Due diligence ujawnia fascynujący obraz: partners w Big Four, founders funduszy VC, właściciele tech companies, board members międzynarodowych korporacji. To nie jest random selection - to network osób, które rozumieją true value tego, czego nie ma na marketplace: authentic silence i unmediated nature.
+            </p>
+            
+            <p>
+                Co charakterystyczne, społeczność rozwija się w sposób zrównoważony. Nowi mieszkańcy weekendowi angażują się w lokalne inicjatywy, wspierają lokalne przedsiębiorstwa, ale jednocześnie cenią sobie dyskrecję i prywatność.
+            </p>
+            
+            <div class="analysis-box">
+                <h3>Zaobserwowane Trendy</h3>
+                <p style="margin-bottom: 1rem;">
+                    • Wzrost zainteresowania lokalnymi produktami i usługami<br>
+                    • Rozwój małej gastronomii nastawionej na wymagających klientów<br>
+                    • Inicjatywy kulturalne organizowane przez mieszkańców weekendowych<br>
+                    • Dbałość o zachowanie lokalnego charakteru miejscowości
+                </p>
+                <p style="margin-top: 1.5rem; font-size: 0.95rem;">
+                    Więcej informacji o lokalnej społeczności i wydarzeniach można znaleźć na <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--secondary-green); text-decoration: none; border-bottom: 1px dotted var(--secondary-green);">KrolewoJoniec.PL</a>
+                </p>
+            </div>
+            
+            <p>
+                Jest coś głęboko symbolicznego w posiadaniu private forest. To reconnection z tym, co utraciliśmy w procesie urbanizacji. Dla pokolenia, które zbudowało swoje fortune w glass towers, forest estate staje się statement o work-life integration - ale na własnych, ultra-exclusive terms.
+            </p>
+        </div>
+    </section>
+
+    <section id="perspektywa" class="article-section">
+        <div class="container">
+            <h2>Legacy dla Next Generation</h2>
+            <p>
+                Ci, którzy myślą long-term, rozumieją simple truth: za 20 lat będzie więcej millionaires, ale nie będzie więcej private forests. Każda forest property zakupiona dziś to hedge na family position w przyszłości. To nie jest price per square meter game - to investment w irreplaceable asset.
+            </p>
+            
+            <p>
+                Planowane inwestycje w infrastrukturę drogową (115 mln PLN na modernizację dróg lokalnych) oraz rozwój sieci światłowodowej tworzą solidne podstawy dla zrównoważonego rozwoju. Jednocześnie ograniczenia wynikające z ochrony krajobrazu zapobiegają nadmiernej urbanizacji.
+            </p>
+            
+            <div class="observation">
+                "Królewo znajduje się w optymalnym momencie rozwoju - infrastruktura się poprawia, ale charakter miejsca pozostaje niezmienny" - komentarz z raportu o rozwoju regionalnym Mazowsza Północnego
+            </div>
+            
+            <p style="text-align: center; margin-top: 3rem;">
+                <a href="https://krolewojoniec.pl" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: var(--accent-green); color: white; text-decoration: none; border-radius: 4px; font-family: 'Segoe UI', sans-serif;">Odkryj dostępne możliwości na KrolewoJoniec.PL →</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="zasoby" class="resources">
+        <div class="wide-container">
+            <h2>Dla Tych, Którzy Rozumieją</h2>
+            <p style="text-align: center; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 3rem;">
+                Dostęp do informacji o ostatnich dostępnych działkach leśnych jest z natury ograniczony. Dla osób, które rozumieją wartość rzadkości:
+            </p>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>KrolewoJoniec.PL</h3>
+                    <p>Exclusive database ostatnich dostępnych forest properties. Real-time updated portfolio opportunities dla tych, którzy rozumieją, że true luxury nie znajdzie się na mainstream platforms.</p>
+                    <a href="https://krolewojoniec.pl" target="_blank">Odkryj rzadkie okazje →</a>
                 </div>
-                <div class="contact-item">
-                    <h3>📧 Email</h3>
-                    <p>rezerwacje@lesnaresidenckjakrolewo.pl</p>
+                <div class="resource-card">
+                    <h3>Urząd Gminy Joniec</h3>
+                    <p>Oficjalne informacje o planach zagospodarowania, inwestycjach i regulacjach lokalnych.</p>
+                    <a href="https://joniec.pl" target="_blank">Sprawdź informacje →</a>
                 </div>
-                <div class="contact-item">
-                    <h3>📍 Adres</h3>
-                    <p>Królewo<br>Mazowieckie, Polska</p>
-                </div>
-                <div class="contact-item">
-                    <h3>🌐 Strona WWW</h3>
-                    <p>www.LesnaResidencjaKrolewo.pl</p>
+                <div class="resource-card">
+                    <h3>Konsultacje Eksperckie</h3>
+                    <p>Dla osób rozważających inwestycję dostępne są konsultacje z ekspertami znającymi specyfikę regionu.</p>
+                    <p style="color: rgba(255,255,255,0.6);">Kontakt przez portale branżowe</p>
                 </div>
             </div>
         </div>
@@ -330,23 +475,36 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Leśna Residencja Królewo. Wszystkie prawa zastrzeżone.</p>
+            <p>&copy; 2024 Leśna Residencja Królewo. Materiał o charakterze informacyjnym.</p>
         </div>
     </footer>
 
     <script>
+        // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
+        });
+        
+        // Add subtle parallax effect to hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero && scrolled < 500) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                hero.style.opacity = 1 - (scrolled * 0.001);
+            }
         });
     </script>
 </body>
