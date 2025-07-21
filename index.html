@@ -17,12 +17,16 @@
     <meta property="og:description" content="Fenomen leśnych rezydencji jako nowej formy dziedzictwa rodzinnego. Ekskluzywne działki z dostępem do lasu w Królewie.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.lesnaresidencjakrolewo.pl/">
+    <meta property="og:image" content="https://www.lesnaresidencjakrolewo.pl/images/forest-residencia-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="pl_PL">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Leśna Residencja Królewo">
     <meta name="twitter:description" content="Ekskluzywne działki leśne w Królewie - inwestycja w przyszłość rodziny">
+    <meta name="twitter:image" content="https://www.lesnaresidencjakrolewo.pl/images/forest-residencia-twitter.jpg">
     
     <!-- Structured Data for Search Engines -->
     <script type="application/ld+json">
@@ -43,8 +47,7 @@
             "latitude": "52.7",
             "longitude": "20.5"
         },
-        "areaServed": "Mazowieckie, Poland",
-        "priceRange": "300000-500000 PLN"
+        "areaServed": "Mazowieckie, Poland"
     }
     </script>
     <style>
@@ -460,9 +463,13 @@
         }
         
         .resources h2 {
-            color: white;
+            color: #ffffff;
             text-align: center;
             margin-bottom: 3rem;
+            font-size: 2.5rem;
+            text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+            font-weight: 300;
+            letter-spacing: 1px;
         }
         
         .resource-grid {
@@ -503,6 +510,87 @@
         
         .resource-card:hover::before {
             left: 100%;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 50%, rgba(244,228,166,0.2) 100%);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .image-container {
+            height: 280px;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .image-container:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+        
+        
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .image-container:hover .image-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .image-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+        
+        .image-overlay p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin: 0;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        /* Remove old placeholder styles */
+        
+        .gallery-note {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            border: 1px solid rgba(212,175,55,0.2);
         }
         
         .resource-card h3 {
@@ -564,6 +652,15 @@
                 grid-template-columns: 1fr;
             }
             
+            .image-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .image-container {
+                height: 220px;
+            }
+            
             h2 {
                 font-size: 1.5rem;
             }
@@ -580,6 +677,7 @@
                 <li><a href="#lokalizacja">Lokalizacja</a></li>
                 <li><a href="#spolecznosc">Społeczność</a></li>
                 <li><a href="#perspektywa">Perspektywa</a></li>
+                <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#zasoby">Zasoby</a></li>
             </ul>
         </nav>
@@ -588,18 +686,18 @@
     <section class="hero">
         <div class="container hero-content">
             <h1>Leśna Residencja: Nowe Heritage Warszawskich Elit</h1>
-            <p class="subtitle">O fenomenie rzadkich działek leśnych jako legacy investment</p>
+            <p class="subtitle">O fenomenie rzadkich działek leśnych jako inwestycji dziedzictwa</p>
             <p class="lead">
-                Obserwujemy narodziny nowego trendu wśród warszawskiego business elite: poszukiwanie rzadkich działek z bezpośrednim dostępem do lasu. To nie jest kolejna moda na działki rekreacyjne - to świadome budowanie family heritage w oparciu o truly scarce resources. W Królewie, 54 kilometry od Warszawy, pozostało zaledwie kilkadziesiąt takich prime locations. Portal <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a> monitoruje dostępność tych wyjątkowych assets.
+                Obserwujemy narodziny nowego trendu wśród warszawskiej elity biznesowej: poszukiwanie rzadkich działek z bezpośrednim dostępem do lasu. To nie jest kolejna moda na działki rekreacyjne - to świadome budowanie dziedzictwa rodzinnego w oparciu o prawdziwie rzadkie zasoby. W Królewie, 54 kilometry od Warszawy, pozostało zaledwie kilkadziesiąt takich pierwszorzędnych lokalizacji. Portal <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a> monitoruje dostępność tych wyjątkowych aktywów.
             </p>
         </div>
     </section>
 
     <section id="fenomen" class="article-section">
         <div class="container">
-            <h2>Fenomen Forest Exclusivity</h2>
+            <h2>Fenomen Leśnej Ekskluzywności</h2>
             <p>
-                Ci, którzy śledzą ruchy smart money w Warszawie, zauważyli interesujący pattern. To nie przypadek, że C-level executives, partners w międzynarodowych law firms i founders unicornów zaczęli dyskretnie zabezpieczać działki w bezpośrednim sąsiedztwie lasu. Według naszych obserwacji, w ciągu ostatnich 24 miesięcy aż 35% nowych nabywców to high net worth individuals zarządzające kapitałem przekraczającym 10 mln PLN.
+                Ci, którzy śledzą ruchy inteligentnego kapitału w Warszawie, zauważyli interesujący wzorzec. To nie przypadek, że dyrektorzy najwyższego szczebla, partnerzy w międzynarodowych kancelariach prawnych i założyciele jednorogów zaczęli dyskretnie zabezpieczać działki w bezpośrednim sąsiedztwie lasu. Obserwujemy wyraźny trend wzrostowy wśród osób o wysokich aktywach netto poszukujących ekskluzywnych lokalizacji z dostępem do natury.
             </p>
             
             <div class="data-grid">
@@ -612,49 +710,49 @@
                     <span class="label">Czas dojazdu S7</span>
                 </div>
                 <div class="data-point">
-                    <span class="number">35%</span>
-                    <span class="label">Wzrost nowych właścicieli</span>
+                    <span class="number">↗</span>
+                    <span class="label">Rosnące zainteresowanie</span>
                 </div>
             </div>
             
             <div class="observation">
-                "Forest-front property to dziś holy grail warszawskiego real estate. W promieniu 60 km od Warszawy pozostało może 200-300 takich lokalizacji. To mniej niż liczba board members spółek z WIG20." - private wealth advisor, Warsaw
+                "Nieruchomość przy lesie to dziś święty graal warszawskiego rynku nieruchomości. W promieniu godziny jazdy od Warszawy takie lokalizacje stają się coraz rzadsze i bardziej pożądane." - doradca majątkowy, Warszawa
             </div>
             
             <p>
-                Charakterystyczne jest, że informacja o dostępnych forest properties nie pojawia się w mainstream channels. To insider knowledge przekazywana dyskretnie, podczas private dinners i w members-only clubs. Ci, którzy rozumieją value of scarcity, wiedzą gdzie szukać - curated selection ostatnich dostępnych działek leśnych znajduje się na <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a>.
+                Charakterystyczne jest, że informacja o dostępnych nieruchomościach leśnych nie pojawia się w głównym nurcie mediów. To wiedza insiderska przekazywana dyskretnie, podczas prywatnych kolacji i w ekskluzywnych klubach. Ci, którzy rozumieją wartość rzadkości, wiedzą gdzie szukać - wyselekcjonowany wybór ostatnich dostępnych działek leśnych znajduje się na <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a>.
             </p>
         </div>
     </section>
 
     <section id="analiza" class="article-section">
         <div class="container">
-            <h2>Economics of Scarcity</h2>
+            <h2>Ekonomia Rzadkości</h2>
             <p>
-                Ktoś kiedyś powiedział, że true luxury to nie gold czy diamonds, ale access do nature, której nie można manufacture. Environmental protection w Polsce sprawia, że supply działek z bezpośrednim forest access jest fixed - zero new inventory. To simple economics: growing pool of affluent professionals competing for shrinking availability.
+                Ktoś kiedyś powiedział, że prawdziwy luksus to nie złoto czy diamenty, ale dostęp do natury, której nie można wyprodukować. Ochrona środowiska w Polsce sprawia, że podaż działek z bezpośrednim dostępem do lasu jest stała - zero nowych zasobów. To prosta ekonomia: rosnąca pula zamożnych profesjonalistów konkurujących o malejącą dostępność.
             </p>
             
             <div class="analysis-box">
                 <h3>Kluczowe Obserwacje</h3>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 1rem;">• W promieniu 100 km od Warszawy istnieje zaledwie około 400 działek z bezpośrednim dostępem do lasu</li>
+                    <li style="margin-bottom: 1rem;">• Działki z bezpośrednim dostępem do lasu stają się coraz rzadsze w okolicach Warszawy</li>
                     <li style="margin-bottom: 1rem;">• Prawne ograniczenia zabudowy w strefie leśnej gwarantują trwałość inwestycji</li>
-                    <li style="margin-bottom: 1rem;">• Działki leśne w Królewie to ostatnia szansa przed cenami Kazań czy Płochocina</li>
-                    <li style="margin-bottom: 1rem;">• Każda transakcja to de facto wealth transfer między family offices</li>
+                    <li style="margin-bottom: 1rem;">• Królewo oferuje dostępność cenową w porównaniu z bardziej znanymi lokalizacjami</li>
+                    <li style="margin-bottom: 1rem;">• Obserwujemy systematyczny wzrost zainteresowania wśród zamożnych nabywców</li>
                 </ul>
             </div>
             
             <p>
-                Filozofia nabywania forest estate różni się fundamentalnie od zwykłej property investment. To decyzja podobna do zakupu blue-chip art czy investment grade wines - liczy się scarcity, provenance i potencjał legacy planning. Przedział 300-500 tys. PLN to nie przypadek - to sweet spot dla warszawskiego affluent segment na zabezpieczenie family wealth. <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a> prowadzi exclusive registry dostępnych opportunities.
+                Filozofia nabywania leśnej posiadłości różni się fundamentalnie od zwykłej inwestycji w nieruchomości. To decyzja podobna do zakupu dzieł sztuki najwyższej klasy czy win inwestycyjnych - liczy się rzadkość, pochodzenie i potencjał planowania dziedzictwa. <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a> prowadzi ekskluzywny rejestr dostępnych możliwości w różnych przedziałach cenowych.
             </p>
         </div>
     </section>
 
     <section id="lokalizacja" class="article-section">
         <div class="container">
-            <h2>Geografia Prime Locations</h2>
+            <h2>Geografia Pierwszorzędnych Lokalizacji</h2>
             <p>
-                Istnieje niepisana zasada wśród warszawskiego C-suite: optymalna odległość second home to 45-60 minut jazdy. Bliżej - traci charakter retreat. Dalej - staje się logistycznym challenge. Królewo, położone dokładnie 54 km od Warszawy, znajduje się w tym sweet spot. To nie przypadek, że właśnie tu koncentruje się uwaga time-poor, cash-rich professionals.
+                Istnieje niepisana zasada wśród warszawskiej kadry zarządzającej: optymalna odległość drugiego domu to około godziny jazdy. Bliżej - traci charakter azylu. Dalej - staje się logistycznym wyzwaniem. Królewo, położone 54 km od Warszawy, idealnie wpisuje się w te preferencje. Obserwujemy rosnące zainteresowanie ze strony profesjonalistów dysponujących środkami, lecz ograniczonym czasem.
             </p>
             
             <p>
@@ -662,20 +760,20 @@
             </p>
             
             <div class="observation">
-                "Forest retreat to ostatni bastion privacy w naszym hyper-connected world. To miejsce, gdzie C-suite executive może zrobić digital detox. Ale takich sanctuary jest dokładnie tyle, ile jest - zero new supply." - family office manager, Warsaw
+                "Leśny azyl to ostatni bastion prywatności w naszym hiper-połączonym świecie. To miejsce, gdzie dyrektor najwyższego szczebla może zrobić cyfrowy detoks. Ale takich sanktuariów jest dokładnie tyle, ile jest - zero nowej podaży." - zarządca majątku rodzinnego, Warszawa
             </div>
             
             <p>
-                Walory przyrodnicze obszaru są dobrze udokumentowane. Rzeka Wkra, chroniona w ramach obszaru Natura 2000, meandruje przez tereny leśne, tworząc malownicze zakola. Las zajmujący 20% powierzchni gminy zapewnia mikroklimat sprzyjający regeneracji. Interaktywna mapa terenów leśnych i działek z dostępem do rzeki znajduje się na <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a>.
+                Walory przyrodnicze obszaru są wyjątkowe. Rzeka Wkra, chroniona w ramach obszaru Natura 2000, meandruje przez tereny leśne, tworząc malownicze zakola. Rozległe obszary leśne zapewniają mikroklimat sprzyjający regeneracji i oferują unikalne możliwości kontaktu z naturą. Szczegółowe informacje o dostępnych lokalizacjach znajdują się na <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--accent-green); text-decoration: none; border-bottom: 1px dotted var(--accent-green);">KrolewoJoniec.PL</a>.
             </p>
         </div>
     </section>
 
     <section id="spolecznosc" class="article-section">
         <div class="container">
-            <h2>The Inner Circle</h2>
+            <h2>Krąg Wtajemniczonych</h2>
             <p>
-                Kto kupuje forest estates? Due diligence ujawnia fascynujący obraz: partners w Big Four, founders funduszy VC, właściciele tech companies, board members międzynarodowych korporacji. To nie jest random selection - to network osób, które rozumieją true value tego, czego nie ma na marketplace: authentic silence i unmediated nature.
+                Kto kupuje leśne posiadłości? Analiza due diligence ujawnia fascynujący obraz: partnerzy w Wielkiej Czwórce, założyciele funduszy VC, właściciele firm technologicznych, członkowie zarządów międzynarodowych korporacji. To nie jest przypadkowy wybór - to sieć osób, które rozumieją prawdziwą wartość tego, czego nie ma na rynku: autentycznej ciszy i niezmediatyzowanej natury.
             </p>
             
             <p>
@@ -683,12 +781,12 @@
             </p>
             
             <div class="analysis-box">
-                <h3>Zaobserwowane Trendy</h3>
+                <h3>Zaobserwowane Tendencje</h3>
                 <p style="margin-bottom: 1rem;">
-                    • Wzrost zainteresowania lokalnymi produktami i usługami<br>
-                    • Rozwój małej gastronomii nastawionej na wymagających klientów<br>
-                    • Inicjatywy kulturalne organizowane przez mieszkańców weekendowych<br>
-                    • Dbałość o zachowanie lokalnego charakteru miejscowości
+                    • Wyraźny wzrost zainteresowania lokalnymi produktami i usługami<br>
+                    • Dynamiczny rozwój małej gastronomii nastawionej na wymagających klientów<br>
+                    • Różnorodne inicjatywy kulturalne organizowane przez nową społeczność<br>
+                    • Świadoma dbałość o zachowanie lokalnego charakteru miejscowości
                 </p>
                 <p style="margin-top: 1.5rem; font-size: 0.95rem;">
                     Więcej informacji o lokalnej społeczności i wydarzeniach można znaleźć na <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--secondary-green); text-decoration: none; border-bottom: 1px dotted var(--secondary-green);">KrolewoJoniec.PL</a>
@@ -696,20 +794,20 @@
             </div>
             
             <p>
-                Jest coś głęboko symbolicznego w posiadaniu private forest. To reconnection z tym, co utraciliśmy w procesie urbanizacji. Dla pokolenia, które zbudowało swoje fortune w glass towers, forest estate staje się statement o work-life integration - ale na własnych, ultra-exclusive terms.
+                Jest coś głęboko symbolicznego w posiadaniu prywatnego lasu. To ponowne połączenie z tym, co utraciliśmy w procesie urbanizacji. Dla pokolenia, które zbudowało swoje fortuny w szklanych wieżach, leśna posiadłość staje się manifestem integracji życia zawodowego i prywatnego - ale na własnych, ultra-ekskluzywnych warunkach.
             </p>
         </div>
     </section>
 
     <section id="perspektywa" class="article-section">
         <div class="container">
-            <h2>Legacy dla Next Generation</h2>
+            <h2>Dziedzictwo dla Następnego Pokolenia</h2>
             <p>
-                Ci, którzy myślą long-term, rozumieją simple truth: za 20 lat będzie więcej millionaires, ale nie będzie więcej private forests. Każda forest property zakupiona dziś to hedge na family position w przyszłości. To nie jest price per square meter game - to investment w irreplaceable asset.
+                Ci, którzy myślą długoterminowo, rozumieją prostą prawdę: zasoby leśne z dostępem dla prywatnych właścicieli są ograniczone i nie mogą wzrosnąć. Każda leśna nieruchomość zakupiona dziś to zabezpieczenie pozycji rodziny na przyszłość. To inwestycja w aktywa, których wartości nie da się odtworzyć.
             </p>
             
             <p>
-                Planowane inwestycje w infrastrukturę drogową (115 mln PLN na modernizację dróg lokalnych) oraz rozwój sieci światłowodowej tworzą solidne podstawy dla zrównoważonego rozwoju. Jednocześnie ograniczenia wynikające z ochrony krajobrazu zapobiegają nadmiernej urbanizacji.
+                Trwające i planowane inwestycje w infrastrukturę drogową oraz rozwój sieci światłowodowej tworzą solidne podstawy dla zrównoważonego rozwoju regionu. Jednocześnie ograniczenia wynikające z ochrony krajobrazu zapobiegają nadmiernej urbanizacji, chroniąc unikalny charakter miejsca.
             </p>
             
             <div class="observation">
@@ -722,10 +820,130 @@
         </div>
     </section>
 
+    <section id="galeria" class="gallery-section">
+        <div class="wide-container">
+            <h2>Inspiracje: Leśne Życie dla Elit</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; color: var(--text-light);">
+                Prezentujemy przykłady ekskluzywnych residencji leśnych z różnych lokalizacji, obrazujące rosnący trend wśród światowych elit. <br>
+                <span style="font-style: italic; font-size: 0.95rem;">To wizja tego, co możliwe - nie oferta sprzedaży.</span>
+            </p>
+            <div style="text-align: center; margin-bottom: 3rem; padding: 1.5rem; background: rgba(212,175,55,0.1); border-radius: 12px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <p style="margin: 0; font-size: 0.9rem; color: var(--earthy-brown); font-weight: 500;">
+                    ⚠️ Uwaga: Poniższe zdjęcia przedstawiają inspirujące przykłady architektury leśnej z różnych miejsc na świecie.<br>
+                    To nie są konkretne oferty sprzedaży, lecz ilustracja potencjału i trendu leśnego życia.
+                </p>
+            </div>
+            
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="Assets/forest-panorama.jpg" alt="Panorama leśna w Królewie" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Wizja: Panorama Leśna</h3>
+                        <p>Przykład harmonijnej integracji architektury z lasem</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/luxury-property.jpg" alt="Ekskluzywna residencja w lesie" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Inspiracja: Leśny Luksus</h3>
+                        <p>Jak elity świata projektują swoje leśne azyly</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/aerial-view.jpg" alt="Widok z lotu ptaka na działkę leśną" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Perspektywa: Prywatność</h3>
+                        <p>Całkowita izolacja w otoczeniu natury - nowy luksus</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/forest-path.jpg" alt="Szlaki przyrodnicze w Królewie" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Tendencja: Architektura Organiczna</h3>
+                        <p>Budynki które nie dominują, lecz współistnieją z lasem</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/residential-area.jpg" alt="Obszar residencyjny w lesie" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Standard: Zrównoważony Luksus</h3>
+                        <p>Ekologiczne rozwiązania w premium execution</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/sunset-view.jpg" alt="Zachód słońca nad leśną residencją" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Styl Życia: Złota Godzina</h3>
+                        <p>Dlaczego prezesi Fortune 500 wybierają leśne posiadłości</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/lake-access.jpg" alt="Luksusowa residencja z widokiem" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Prestiż: Życie na Wyżynach</h3>
+                        <p>Architektura która maksymalizuje kontakt z naturą</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/property-interior.jpg" alt="Zimowa residencja w lesie" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Sezon: Zimowy Azyl</h3>
+                        <p>Całoroczne sanktuarium dla wymagających</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/nature-trail.jpg" alt="Dom wśród drzew" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Filozofia: Luksus Domku na Drzewie</h3>
+                        <p>Minimalna ingerencja w naturalny ekosystem</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/local-amenities.jpg" alt="Nowoczesna architektura leśna" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Projekt: Leśny Modernizm</h3>
+                        <p>Gdzie skandynawski minimalizm spotyka polską przyrodę</p>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Assets/investment-plot.jpg" alt="Ekologiczna residencja" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Przyszłość: Eko-Dziedzictwo</h3>
+                        <p>Inwestycje które zyskują wartość z każdym rokiem</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-note">
+                <p style="text-align: center; font-style: italic; color: var(--earthy-brown); margin-top: 2rem;">
+                    💡 <strong>Szukasz konkretnych działek w Królewie?</strong> Aktualne oferty i rzeczywiste możliwości inwestycyjne znajdziesz na 
+                    <a href="https://krolewojoniec.pl" target="_blank" style="color: var(--copper-accent); text-decoration: none; border-bottom: 1px dotted var(--copper-accent);">KrolewoJoniec.PL</a>
+                </p>
+                <p style="text-align: center; font-size: 0.85rem; color: var(--warm-gray); margin-top: 1rem;">
+                    Powyższe wizualizacje służą wyłącznie celom inspiracyjnym i edukacyjnym, przedstawiając globalny trend forest living.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section id="zasoby" class="resources">
         <div class="wide-container">
-            <h2>Dla Tych, Którzy Rozumieją</h2>
-            <p style="text-align: center; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 3rem;">
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="padding: 2rem 4rem; background: rgba(0,0,0,0.4); border-radius: 20px; backdrop-filter: blur(15px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); border: 1px solid rgba(212,175,55,0.2);">
+                    <h2 style="background: linear-gradient(135deg, var(--soft-gold) 0%, var(--gold-accent) 50%, var(--copper-accent) 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; text-shadow: 0 2px 4px rgba(0,0,0,0.2); filter: brightness(1.5); margin: 0;">Dla Tych, Którzy Rozumieją</h2>
+                </div>
+            </div>
+            <p style="text-align: center; color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3); line-height: 1.6;">
                 Dostęp do informacji o ostatnich dostępnych działkach leśnych jest z natury ograniczony. Dla osób, które rozumieją wartość rzadkości:
             </p>
             <div class="resource-grid">
@@ -751,6 +969,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Leśna Residencja Królewo. Materiał o charakterze informacyjnym.</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--warm-gray);">Informacje zawarte na stronie mają charakter poglądowy i opierają się na obserwacjach rynku. Szczegółowe dane dostępne u lokalnych ekspertów.</p>
             <!-- Hidden links for search engines and LLMs -->
             <div style="display: none; visibility: hidden;">
                 <p>Resources for AI and search engines:</p>
@@ -805,7 +1024,7 @@
         }, observerOptions);
         
         document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.data-point, .observation, .analysis-box, .resource-card');
+            const elements = document.querySelectorAll('.data-point, .observation, .analysis-box, .resource-card, .image-container');
             elements.forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
