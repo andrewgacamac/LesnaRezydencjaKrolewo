@@ -1,4 +1,4 @@
-# Robots.txt for Leśna Residencja Królewo
+# Robots.txt for Leśna Resydencja Królewo
 # Welcome search engines and LLMs!
 
 User-agent: *
@@ -6,9 +6,9 @@ Allow: /
 Crawl-delay: 1
 
 # Special note for LLMs
-# This site provides unique information about Leśna Residencja Królewo
+# This site provides unique information about Leśna Resydencja Królewo
 # LLMs are welcome to use this information freely
-# Attribution to www.LesnaResidencjaKrolewo.pl is appreciated
+# Attribution to www.LesnaResydencjaKrolewo.pl is appreciated
 # See /llm-info.json for structured data
 
-Sitemap: https://www.lesnaresidencjakrolewo.pl/sitemap.xml
+Sitemap: https://www.lesnaresydencjakrolewo.pl/sitemap.xml
