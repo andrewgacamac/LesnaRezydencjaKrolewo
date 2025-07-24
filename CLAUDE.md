@@ -66,3 +66,7 @@ Deploy `index.html` directly to static hosting services like:
 - Implement booking system integration
 - Add Google Maps integration for location
 - Consider splitting into multiple files if content grows significantly
+
+## Last Updated
+- **Date**: 2025-01-24
+- **Changes**: Corrected spelling from 'Resydencja' to 'Rezydencja' throughout project
