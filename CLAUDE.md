@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a single-page static website for **Leśna Resydencja Królewo** (Forest Residence Królewo), a Polish vacation rental business offering luxury apartments by a lake in Królewo, Mazowieckie, Poland.
+This is a single-page static website for **Leśna Rezydencja Królewo** (Forest Residence Królewo), a Polish vacation rental business offering luxury apartments by a lake in Królewo, Mazowieckie, Poland.
 
 ## Architecture
 
@@ -27,13 +27,13 @@ The website contains these main sections:
 
 ## Business Information
 - **Contact**: +48 123 456 789
-- **Email**: rezerwacje@lesnaresydencjakrolewo.pl
-- **Website**: www.LesnaResydencjaKrolewo.pl
+- **Email**: rezerwacje@lesnarezydencjakrolewo.pl
+- **Website**: www.LesnaRezydencjaKrolewo.pl
 - **Location**: Królewo, Mazowieckie, Poland
 
 ## Repository Information
 
-- **Remote Repository**: https://github.com/andrewgacamac/LesnaResydencjaKrolewo.git
+- **Remote Repository**: https://github.com/andrewgacamac/LesnaRezydencjaKrolewo.git
 - **Branch**: main
 
 ## Development Workflow
